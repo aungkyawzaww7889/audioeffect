@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap')
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    /* font-family: sans-serif; */
+    font-family: "EB Garamond", serif;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items:center; 
+}
+
+
+.container{
+    width: 300px;
+    /* background-color: steelblue; */
+    background: linear-gradient(to right, rgb(31, 64, 55), rgb(153, 242, 200));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items:center; 
+    flex-direction: column;
+
+    position: relative;
+
+}
+
+
+.head{
+    padding: 10px;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: center;
+    align-items:center; 
+    flex-direction: column;
+
+    position:relative;
+
+}
+
+
+
+.head::after{
+    content:'';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    position:absolute;
+    top:40%;
+    left:50%; 
+    transform: translate(-50%,-50%);
+
+
+}
+
+.head .imgs{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.head.centers .imgs{
+    animation-name: circlesani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes circlesani{
+    0%{ 
+        transform: rotate(0);
+
+    }
+
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+
+
+
+.head .musicnames{
+    color: #fff;
+    letter-spacing: 2px;
+    margin:0;
+    padding: 10px 0px 5px 0;
+}
+
+.progress{
+    width: 90%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+
+    margin-bottom: 30px;
+}
+
+.progress .progressbar{
+    width: 0%;
+    height: 100%;
+    background-color:aqua;
+    border-radius: 10px;
+}
+
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+button{
+    background-color: transparent;
+    color: #fff;
+    border:none;
+    outline: none;
+    font-size: 20px;
+    margin: 0 30px;
+    cursor: pointer;
+
+    transition: transform 0.5s;
+
+}
+
+button:active{
+    transform: scale(0.5);
+}
+
+
+.displaytime{
+    color: rgb(42, 139, 113);
+    font-weight: bold;
+    position: absolute;
+    right:10%;
+    bottom: 19%;
+
+}
+
+
+.volumes{
+    font-size: 15px;
+    color: rgb(37, 114, 94);
+    position: absolute;
+    /* left:10%; */
+    /* bottom: 19%; */
+    left: 6%;
+    top: 10%;
+    cursor: pointer;
+
+    transition: transform 0.5s;
+}
+
+.volumes:hover{
+    color: rgb(98, 196, 170);
+}
+
+.volumes:active{
+    transform: scale(0.5);
+}
+
+
+.volumeprogress{
+    height: 5px;
+    width: 20%;
+
+    position: absolute;
+    /* left:20%;
+    bottom: 21%; */
+    top: 30%;
+    left:-2%;
+
+    cursor: pointer;
+
+    transform: rotate(-90deg);
+
+    display: none;
+    
+}
+
+.volumecontrols.shows .volumeprogress{
+    display: block;
+}
+
+
+input[type='range'] {
+    overflow: hidden;
+    width: 70px;
+    -webkit-appearance: none;
+    background-color: #13bba4;
+  }
+  
+  /* input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: #434343;
+    box-shadow: -80px 0 0 80px #43e5f7;
+  } */
+
+/* input[type="range"]::-moz-range-progress {
+    background-color: #43e5f7; 
+  }
+  input[type="range"]::-moz-range-track {  
+    background-color: #9a905d;
+  }
+
+
+  input[type="range"]::-ms-fill-lower {
+    background-color: #43e5f7; 
+  }
+  input[type="range"]::-ms-fill-upper {  
+    background-color: #9a905d;
+  } */
